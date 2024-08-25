@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网址导航</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 14px;
+      color: #333;
+    }
+    
+    body {
+      background: url(img/背景图1.jpg) repeat-y scroll 50% 0/cover;
+    }
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    input {
+      outline: 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    input:hover {
+      border: 1px solid blue;
+    }
+
+    .fz12 {
+      font-size: 12px;
+    }
+
+    .header {
+      margin-top: 10px;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .m20,
+    .entry {
+      margin-left: 20px;
+    }
+    .entry:hover {
+      text-decoration: underline;
+      color: rgb(78,110,242);
+    }
+
+    .top-img {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    .top {
+      width: 200px;
+      height: auto;
+    }
+
+    .wrap {
+      width: 700px;
+      margin: 10px auto;
+      height: 40px;
+    }
+
+    .clik {
+      width: 100px;
+      height: 40px;
+      background-color: rgb(78,110,242);
+      color: #f1f1f1
+    }
+
+    .search {
+      width: 500px;
+      height: 40px;
+    }
+
+    .container {
+      width: 700px;
+      margin: 10px auto;
+    }
+
+    .titlecontainer {
+      width: 680px;
+      margin: 10px auto;
+      margin-top: 50px;
+    }
+
+    .titlecontainer:hover {
+      text-decoration: underline;
+    }
+
+    .title {
+      color: rgb(173, 32, 32);
+    }
+
+    .container ul li {
+      display: inline-block;
+      width: 288px;
+      margin-right: 58px;
+      line-height:36px;
+    }
+
+    .container li span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px;
+    }
+    .container li span:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .container  li[class$='gray']:before {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 22px;
+      width: 22px;
+      height: 22px;
+      margin-right: 4px;
+      background: url(img/top_rank.png) no-repeat -48px -50px;
+    }
+
+    .container  li[class*='four']:before {
+      content: "4";
+      font-size: 14px;
+      text-align: center;
+      color: #9195ab;
+    }
+
+    .container  li[class*='five']:before {
+      content: "5";
+      font-size: 14px;
+      text-align: center;
+      color: #9195ab;
+    }
+
+    .container  li[class*='six']:before {
+      content: "6";
+      font-size: 14px;
+      text-align: center;
+      color: #9195ab;
+    }
+
+    .container  li[class*='one']:before {
+      content: "1";
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 22px;
+      width: 22px;
+      height: 22px;
+      margin-right: 4px;
+      background: url(img/top_rank.png) no-repeat -9px -10px;
+    }
+
+    .container  li[class*='two']:before {
+      content: "2";
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 22px;
+      width: 22px;
+      height: 22px;
+      margin-right: 4px;
+      background: url(img/top_rank.png) no-repeat -49px -10px;
+    }
+
+    .container  li[class*='three']:before {
+      content: "3";
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 22px;
+      width: 22px;
+      height: 22px;
+      margin-right: 4px;
+      background: url(img/top_rank.png) no-repeat -9px -50px;
+    }
+
+    .container ul li[icon$='hot']:after {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px;
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+      background: url(img/top_icon.png) no-repeat -10px -10px;
+    }
+
+    .container ul li[icon$='new']:after {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 20px;
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+      background: url(img/top_icon.png) no-repeat -46px -10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="https://www.hao123.com/" target="_blank" class="m20 fz12">hao123</a>
+    <a href="https://map.baidu.com/@12573153.72,3258106.27,12z" target="_blank" class="m20 fz12">地图</a>
+    <a href="https://live.baidu.com/" target="_blank" class="m20 fz12">直播</a>
+    <a href="https://haokan.baidu.com/?sfrom=baidu-top" target="_blank" class="m20 fz12">视频</a>
+    <a href="http://tieba.baidu.com/" target="_blank" class="m20 fz12">贴吧</a>
+    <a href="https://xueshu.baidu.com/" target="_blank" class="m20 fz12">学术</a>
+    <a href="https://www.baidu.com/more/" target="_blank" class="m20 fz12">更多</a>
+    <a class="entry fz12" href="登录页面.html" target="_blank">用户登录</a>
+    <a class="fz12 m20" href="#">设置</a>
+  </div>
+
+  <div class="top-img">
+    <img class="top" src="img/百度图片.png" width="540" height="258" alt="!">
+  </div>
+
+  <div class="wrap">
+    <form action="https://www.baidu.com/s" method="get">
+      <input class="search" name="wd" type='text' value=''>
+      <input class="clik" type='submit' value='百度一下'>
+    </form>
+  </div>
+  <div class="titlecontainer">
+    <a class="title" href="https://top.baidu.com/board?platform=pc&sa=pcindex_entry" target="_blank">百度热搜</a>
+  </div>
+  <div class="container">
+    <ul>
+      <li icon="icon-hot" class="one">
+        <a href="#">
+          <span>高福称北京疫情可能要前推一个月</span>
+        </a>
+      </li>
+      <li icon="icon-new" class="four gray">
+        <a href="动物简介.html" target="_blank">
+          <span>动物简介</span>
+        </a>
+      </li>
+      <li class="two">
+        <a href="动物新闻.html" target="_blank">
+         <span>动物新闻</span>
+        </a>
+      </li>
+      <li  class="five gray">
+        <a href="手机销售平台.html" target="_blank">
+          <span>小米手机新品</span>
+        </a>
+      </li>
+      <li class="three">
+        <a href="#">
+          <span>男童在确诊患者被子上玩感染</span>
+        </a>
+      </li>
+      <li  class="six gray">
+        <a href="#">
+          <span>110万买奔驰越野高速熄火5次</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

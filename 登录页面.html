@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页面</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: url(img/背景图1.jpg) repeat-y scroll 50% 0/cover;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      line-height:40px;
+    }
+
+    h3 {
+      text-align: center;
+      line-height: 40px;
+      color: rgb(102,102,102);
+    }
+
+    label {
+      margin-right: 50px;
+    }
+
+    input {
+      height: 25px;
+      border-radius: 10px;
+      vertical-align: middle;
+      outline: 0;
+      border: 1px solid #ccc;
+    }
+
+    a {
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(230, 13, 13);
+      text-decoration: underline;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .container {
+      width: 400px;
+      margin: 30px auto; 
+    }
+
+    .fz12 {
+      font-size: 12px;
+      color: rgb(164,164,164);
+    }
+
+    .fz14 {
+      font-size: 14px;
+      color: #000;
+    }
+
+    .pw {
+      margin-right: 82px;
+    }
+
+    .blank {
+      padding-left: 120px;
+    }
+
+    .selection {
+      text-align: center;
+    }
+
+    .setting:active {
+      color: pink;
+      text-decoration: none;
+    }
+
+    .space {
+      margin-right: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>会员登录</h3>
+    <ul>
+      <li>
+        <label for="name">登录账号</label>
+        <input id="name" type='text' placeholder='请输入用户名' value='' maxlength='25' required>
+      </li>
+      <li>
+        <label for="pwd" class="pw">密码</label>
+        <input id="pwd" type='password' placeholder='请输入密码' value='' maxlength='25' required>
+      </li>
+      <li class="blank">
+        <input type='checkbox' checked>
+        <span class="fz12">两周内自动登录</span>
+      </li>
+      <li class="blank">
+        <a href="https:www.baidu.com/" target="_blank"><img src="images/login.png" width="64" height="22" alt="!"> 忘记密码</a> 
+      </li>
+      <li>
+        <span class="space">其他账号登录</span>
+        <img src="images/ico1.png" width="15" height="15" alt="!">
+        <a class="fz12" href="#">QQ账号</a>
+        <img src="images/ico2.png" width="19" height="15" alt="!">
+        <a class="fz12" href="#">新浪微博</a>
+        <img src="images/ico3.png" width="14" height="14" alt="!">
+        <a class="fz12" href="#">百度账号</a>
+      </li>
+      <li class="selection">
+        <a class="setting" href="https:www.baidu.com/" target="_blank">还不是会员?立即注册</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
